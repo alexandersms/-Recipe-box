@@ -4,7 +4,13 @@ import AdminForm from "./AdminForm";
 
 class Admin extends Component {
   render() {
-    const { recettes, addRecette, editRecette, chargerExemple } = this.props;
+    const {
+      recettes,
+      addRecette,
+      editRecette,
+      deleteRecette,
+      chargerExemple
+    } = this.props;
     return (
       <div className="cards">
         <AddRecette addRecette={addRecette} />
@@ -13,6 +19,7 @@ class Admin extends Component {
             key={key}
             id={key}
             editRecette={editRecette}
+            deleteRecette={deleteRecette}
             recettes={recettes}
           />
         ))}
